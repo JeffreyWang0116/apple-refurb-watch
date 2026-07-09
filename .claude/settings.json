@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(schedule)",
+      "Skill(schedule:*)",
+      "PowerShell(gh auth status)",
+      "Bash(mkdir -p /c/Users/USER/AppData/Local/Temp/claude/c--Users-USER-Downloads-macbook/a4660f04-b3f1-4c48-863e-b53ae38a0246/scratchpad)",
+      "Bash(curl -sL -A 'Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/126.0 Safari/537.36' https://www.apple.com/tw/shop/refurbished/mac -o /c/Users/USER/AppData/Local/Temp/claude/c--Users-USER-Downloads-macbook/a4660f04-b3f1-4c48-863e-b53ae38a0246/scratchpad/refurb_mac.html)",
+      "Read(//c/Users/USER/AppData/Local/Temp/claude/c--Users-USER-Downloads-macbook/a4660f04-b3f1-4c48-863e-b53ae38a0246/scratchpad/**)",
+      "Bash(python -c ' *)",
+      "Bash(python check_refurb.py)",
+      "Read(//c/msys64/ucrt64/etc/ssl/certs//**)",
+      "Read(//c/msys64/usr/ssl/certs//**)",
+      "Bash(python -m certifi)",
+      "Bash(export SSL_CERT_FILE=/c/msys64/ucrt64/etc/ssl/certs/ca-bundle.crt)",
+      "Bash(python -c \"import ssl; print\\(ssl.get_default_verify_paths\\(\\)\\)\")"
+    ]
+  }
+}
