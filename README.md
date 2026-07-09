@@ -41,6 +41,21 @@
 到 repo 的 **Actions** 頁籤，選 "Check Apple Refurbished MacBook"，
 按 **Run workflow** 手動跑一次確認正常，之後就會自動每 30 分鐘執行。
 
+## Bot 指令（選擇通知範圍）
+
+直接在 Telegram 對 bot 傳送：
+
+| 指令 | 效果 |
+|---|---|
+| `/air` | 只通知 MacBook Air |
+| `/pro` | 只通知 MacBook Pro |
+| `/all` | 通知全部 MacBook（預設） |
+| `/status` | 查看目前設定與現有商品數 |
+
+指令會在**下一次排程檢查時**處理（最多等 30 分鐘），bot 屆時會回覆確認訊息。
+設定存在 `config.json`。切換範圍不影響追蹤基準——`state.json` 永遠記錄全部
+MacBook，篩選只套用在發通知的當下，所以來回切換不會漏報或誤報。
+
 ## 注意事項
 
 - GitHub Actions 的排程在尖峰時段可能延遲數分鐘，屬正常現象。

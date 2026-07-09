@@ -15,13 +15,83 @@ if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 PAGE_URL = "https://www.apple.com/tw/shop/refurbished/mac"
-STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state.json")
+_HERE = os.path.dirname(os.path.abspath(__file__))
+STATE_FILE = os.path.join(_HERE, "state.json")
+CONFIG_FILE = os.path.join(_HERE, "config.json")
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
     "(KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 )
-KEYWORD = "MacBook"  # 只通知名稱含此關鍵字的商品
+KEYWORD = "MacBook"  # 只追蹤名稱含此關鍵字的商品
 TELEGRAM_MSG_LIMIT = 4096
+
+# 通知範圍設定：state.json 永遠追蹤全部 MacBook，篩選只在「發通知時」套用，
+# 這樣切換範圍不會造成漏報或誤報
+FILTER_LABELS = {
+    "all": "全部 MacBook（Air + Pro）",
+    "air": "只有 MacBook Air",
+    "pro": "只有 MacBook Pro",
+}
+
+
+def matches_filter(name, mode):
+    if mode == "air":
+        return "MacBook Air" in name
+    if mode == "pro":
+        return "MacBook Pro" in name
+    return True
+
+
+def load_config():
+    if os.path.exists(CONFIG_FILE):
+        with open(CONFIG_FILE, encoding="utf-8") as f:
+            return json.load(f)
+    return {"filter": "all", "telegram_offset": 0}
+
+
+def save_config(config):
+    with open(CONFIG_FILE, "w", encoding="utf-8") as f:
+        json.dump(config, f, ensure_ascii=False, indent=1, sort_keys=True)
+
+
+def get_updates(offset):
+    token = os.environ["TELEGRAM_BOT_TOKEN"]
+    api = f"https://api.telegram.org/bot{token}/getUpdates?offset={offset}"
+    with urllib.request.urlopen(api, timeout=30) as resp:
+        result = json.loads(resp.read())
+    return result.get("result", []) if result.get("ok") else []
+
+
+def status_text(config, current):
+    air = sum(1 for p in current.values() if "MacBook Air" in p["name"])
+    pro = sum(1 for p in current.values() if "MacBook Pro" in p["name"])
+    return (
+        f"📋 目前通知範圍：{FILTER_LABELS[config['filter']]}\n"
+        f"頁面上現有 MacBook Air {air} 台、MacBook Pro {pro} 台\n\n"
+        "指令：\n"
+        "/air - 只通知 MacBook Air\n"
+        "/pro - 只通知 MacBook Pro\n"
+        "/all - 通知全部 MacBook\n"
+        "/status - 查看目前設定\n\n"
+        "（指令會在下一次檢查時處理，最多等 30 分鐘）"
+    )
+
+
+def process_commands(config, current):
+    """讀取你在 Telegram 發給 bot 的指令，更新通知範圍設定並回覆確認。"""
+    my_chat_id = os.environ["TELEGRAM_CHAT_ID"]
+    for upd in get_updates(config["telegram_offset"]):
+        config["telegram_offset"] = upd["update_id"] + 1
+        msg = upd.get("message") or {}
+        if str((msg.get("chat") or {}).get("id")) != str(my_chat_id):
+            continue  # 忽略其他人傳給 bot 的訊息
+        cmd = (msg.get("text") or "").strip().lower().split("@")[0]
+        if cmd in ("/air", "/pro", "/all"):
+            config["filter"] = cmd[1:]
+            print(f"通知範圍切換為: {config['filter']}")
+            send_telegram(f"✅ 已切換通知範圍：{FILTER_LABELS[config['filter']]}")
+        elif cmd in ("/status", "/start", "/help"):
+            send_telegram(status_text(config, current))
 
 
 def fetch_products():
@@ -89,12 +159,15 @@ def notify(new_items):
 
 def main():
     current = fetch_products()
+    config = load_config()
+    process_commands(config, current)
 
     if not os.path.exists(STATE_FILE):
         # 第一次執行：建立基準清單，不發通知
         with open(STATE_FILE, "w", encoding="utf-8") as f:
             json.dump(current, f, ensure_ascii=False, indent=1, sort_keys=True)
         print(f"首次執行，已記錄 {len(current)} 台 MacBook 作為基準，不發送通知")
+        save_config(config)
         return
 
     with open(STATE_FILE, encoding="utf-8") as f:
@@ -106,16 +179,23 @@ def main():
     if new_skus:
         new_items = [current[sku] for sku in new_skus]
         for item in new_items:
-            print(f"新上架: {item['name']} NT${item['price']:,}")
-        notify(new_items)
+            wanted = matches_filter(item["name"], config["filter"])
+            print(f"新上架{'' if wanted else '（不在通知範圍，略過）'}: "
+                  f"{item['name']} NT${item['price']:,}")
+        notify_items = [i for i in new_items
+                        if matches_filter(i["name"], config["filter"])]
+        if notify_items:
+            notify(notify_items)
     if gone_skus:
         for sku in gone_skus:
             print(f"已下架: {previous[sku]['name']}")
     if not new_skus and not gone_skus:
-        print(f"無變化（目前 {len(current)} 台 MacBook）")
+        print(f"無變化（目前 {len(current)} 台 MacBook，"
+              f"通知範圍: {FILTER_LABELS[config['filter']]}）")
 
     with open(STATE_FILE, "w", encoding="utf-8") as f:
         json.dump(current, f, ensure_ascii=False, indent=1, sort_keys=True)
+    save_config(config)
 
 
 if __name__ == "__main__":
