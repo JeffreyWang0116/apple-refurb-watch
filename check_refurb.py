@@ -116,7 +116,9 @@ def fetch_products():
         if not sku:
             continue
         products[sku] = {
-            "name": data["name"],
+            # Apple 名稱用不換行空格（U+00A0）分隔，正規化成一般空格，
+            # 否則 "MacBook Pro"/"MacBook Air" 這類含空格的比對永遠失敗
+            "name": data["name"].replace("\u00a0", " "),  # normalize non-breaking space
             "price": int(offer.get("price") or 0),
             "url": data.get("url", PAGE_URL),
         }
