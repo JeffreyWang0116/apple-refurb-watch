@@ -4,11 +4,6 @@
   "price": 84900,
   "url": "https://www.apple.com/tw/shop/product/fge44ta/a/16-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU-銀色-整修品"
  },
- "FGE64TA/A": {
-  "name": "16 吋 MacBook Pro Apple M5 Pro 晶片配備 18 核心 CPU 與 20 核心 GPU - 銀色 (整修品)",
-  "price": 102800,
-  "url": "https://www.apple.com/tw/shop/product/fge64ta/a/16-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU-銀色-整修品"
- },
  "FGE74TA/A": {
   "name": "16 吋 MacBook Pro Apple M5 Max 晶片配備 18 核心 CPU 與 32 核心 GPU - 銀色 (整修品)",
   "price": 123200,
@@ -58,11 +53,6 @@
   "name": "14 吋 MacBook Pro Apple M4 Max 晶片配備 14 核心 CPU 與 32 核心 GPU - 銀色 (整修品)",
   "price": 101300,
   "url": "https://www.apple.com/tw/shop/product/fx2g3ta/a/14-吋-MacBook-Pro-Apple-M4-Max-晶片配備-14-核心-CPU-與-32-核心-GPU-銀色-整修品"
- },
- "FX2J3TA/A": {
-  "name": "14 吋 MacBook Pro Apple M4 Pro 晶片配備 14 核心 CPU 與 20 核心 GPU - 太空黑色 (整修品)",
-  "price": 75900,
-  "url": "https://www.apple.com/tw/shop/product/fx2j3ta/a/14-吋-MacBook-Pro-Apple-M4-Pro-晶片配備-14-核心-CPU-與-20-核心-GPU-太空黑色-整修品"
  },
  "FX2K3TA/A": {
   "name": "14 吋 MacBook Pro Apple M4 Max 晶片配備 14 核心 CPU 與 32 核心 GPU - 太空黑色 (整修品)",
@@ -134,20 +124,10 @@
   "price": 141000,
   "url": "https://www.apple.com/tw/shop/product/g1mj4ta/a/14-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU-銀色-整修品"
  },
- "G1MW0TA/A": {
-  "name": "16 吋 MacBook Pro Apple M5 Pro 晶片配備 18 核心 CPU 與 20 核心 GPU、奈米紋理顯示器 - 銀色 (整修品)",
-  "price": 107300,
-  "url": "https://www.apple.com/tw/shop/product/g1mw0ta/a/16-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU奈米紋理顯示器-銀色-整修品"
- },
  "G1MY4TA/A": {
   "name": "16 吋 MacBook Pro Apple M5 Max 晶片配備 18 核心 CPU 與 40 核心 GPU、奈米紋理顯示器 - 銀色 (整修品)",
   "price": 160800,
   "url": "https://www.apple.com/tw/shop/product/g1my4ta/a/16-吋-MacBook-Pro-Apple-M5-Max-晶片配備-18-核心-CPU-與-40-核心-GPU奈米紋理顯示器-銀色-整修品"
- },
- "G1MYBTA/A": {
-  "name": "16 吋 MacBook Pro Apple M5 Max 晶片配備 18 核心 CPU 與 40 核心 GPU - 銀色 (整修品)",
-  "price": 156300,
-  "url": "https://www.apple.com/tw/shop/product/g1mybta/a/16-吋-MacBook-Pro-Apple-M5-Max-晶片配備-18-核心-CPU-與-40-核心-GPU-銀色-整修品"
  },
  "G1MYETA/A": {
   "name": "16 吋 MacBook Pro Apple M5 Max 晶片配備 18 核心 CPU 與 40 核心 GPU - 銀色 (整修品)",
