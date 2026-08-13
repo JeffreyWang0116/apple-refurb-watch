@@ -34,11 +34,6 @@
   "price": 84900,
   "url": "https://www.apple.com/tw/shop/product/fgea4ta/a/16-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU-太空黑色-整修品"
  },
- "FGEC4TA/A": {
-  "name": "16 吋 MacBook Pro Apple M5 Pro 晶片配備 18 核心 CPU 與 20 核心 GPU - 太空黑色 (整修品)",
-  "price": 102800,
-  "url": "https://www.apple.com/tw/shop/product/fgec4ta/a/16-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU-太空黑色-整修品"
- },
  "FGED4TA/A": {
   "name": "16 吋 MacBook Pro Apple M5 Max 晶片配備 18 核心 CPU 與 32 核心 GPU - 太空黑色 (整修品)",
   "price": 123200,
@@ -89,30 +84,10 @@
   "price": 101300,
   "url": "https://www.apple.com/tw/shop/product/fx2g3ta/a/14-吋-MacBook-Pro-Apple-M4-Max-晶片配備-14-核心-CPU-與-32-核心-GPU-銀色-整修品"
  },
- "FX2K3TA/A": {
-  "name": "14 吋 MacBook Pro Apple M4 Max 晶片配備 14 核心 CPU 與 32 核心 GPU - 太空黑色 (整修品)",
-  "price": 101300,
-  "url": "https://www.apple.com/tw/shop/product/fx2k3ta/a/14-吋-MacBook-Pro-Apple-M4-Max-晶片配備-14-核心-CPU-與-32-核心-GPU-太空黑色-整修品"
- },
  "FX2T3TA/A": {
   "name": "16 吋 MacBook Pro Apple M4 Pro 晶片配備 14 核心 CPU 與 20 核心 GPU - 銀色 (整修品)",
   "price": 73600,
   "url": "https://www.apple.com/tw/shop/product/fx2t3ta/a/16-吋-MacBook-Pro-Apple-M4-Pro-晶片配備-14-核心-CPU-與-20-核心-GPU-銀色-整修品"
- },
- "FX2U3TA/A": {
-  "name": "16 吋 MacBook Pro Apple M4 Pro 晶片配備 14 核心 CPU 與 20 核心 GPU - 銀色 (整修品)",
-  "price": 91300,
-  "url": "https://www.apple.com/tw/shop/product/fx2u3ta/a/16-吋-MacBook-Pro-Apple-M4-Pro-晶片配備-14-核心-CPU-與-20-核心-GPU-銀色-整修品"
- },
- "FX2V3TA/A": {
-  "name": "16 吋 MacBook Pro Apple M4 Max 晶片配備 14 核心 CPU 與 32 核心 GPU - 銀色 (整修品)",
-  "price": 106400,
-  "url": "https://www.apple.com/tw/shop/product/fx2v3ta/a/16-吋-MacBook-Pro-Apple-M4-Max-晶片配備-14-核心-CPU-與-32-核心-GPU-銀色-整修品"
- },
- "FX2W3TA/A": {
-  "name": "16 吋 MacBook Pro Apple M4 Max 晶片配備 16 核心 CPU 與 40 核心 GPU - 銀色 (整修品)",
-  "price": 127100,
-  "url": "https://www.apple.com/tw/shop/product/fx2w3ta/a/16-吋-MacBook-Pro-Apple-M4-Max-晶片配備-16-核心-CPU-與-40-核心-GPU-銀色-整修品"
  },
  "FX2Y3TA/A": {
   "name": "16 吋 MacBook Pro Apple M4 Pro 晶片配備 14 核心 CPU 與 20 核心 GPU - 太空黑色 (整修品)",
