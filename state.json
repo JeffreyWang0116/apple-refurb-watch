@@ -4,11 +4,6 @@
   "price": 45800,
   "url": "https://www.apple.com/tw/shop/product/fc6j4ta/a/15-吋-MacBook-Air-Apple-M4-晶片配備-10-核心-CPU-與-10-核心-GPU-銀色-(整修品)"
  },
- "FC7A4TA/A": {
-  "name": "15 吋 MacBook Air Apple M4 晶片配備 10 核心 CPU 與 10 核心 GPU - 天藍色 (整修品)",
-  "price": 33900,
-  "url": "https://www.apple.com/tw/shop/product/fc7a4ta/a/15-吋-MacBook-Air-Apple-M4-晶片配備-10-核心-CPU-與-10-核心-GPU-天藍色-(整修品)"
- },
  "FDE14TA/A": {
   "name": "14 吋 MacBook Pro Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 太空黑色 (整修品)",
   "price": 55200,
@@ -18,11 +13,6 @@
   "name": "14 吋 MacBook Pro Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 太空黑色 (整修品)",
   "price": 61100,
   "url": "https://www.apple.com/tw/shop/product/fde34ta/a/14-吋-MacBook-Pro-Apple-M5-晶片配備-10-核心-CPU-與-10-核心-GPU-太空黑色-整修品"
- },
- "FDE54TA/A": {
-  "name": "14 吋 MacBook Pro Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 銀色 (整修品)",
-  "price": 55200,
-  "url": "https://www.apple.com/tw/shop/product/fde54ta/a/14-吋-MacBook-Pro-Apple-M5-晶片配備-10-核心-CPU-與-10-核心-GPU-銀色-整修品"
  },
  "FDE64TA/A": {
   "name": "14 吋 MacBook Pro Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 銀色 (整修品)",
@@ -154,16 +144,6 @@
   "price": 22000,
   "url": "https://www.apple.com/tw/shop/product/fhfj4ta/a/13-吋-macbook-neo-胭粉色"
  },
- "FLXW3TA/A": {
-  "name": "13 吋 MacBook Air Apple M2 晶片配備 8 核心 CPU 與 8 核心 GPU - 太空灰色 (整修品)",
-  "price": 22700,
-  "url": "https://www.apple.com/tw/shop/product/flxw3ta/a/13-吋-MacBook-Air-Apple-M2-晶片配備-8-核心-CPU-與-8-核心-GPU-太空灰色-整修品"
- },
- "FW1G3TA/A": {
-  "name": "15 吋 MacBook Air Apple M4 晶片配備 10 核心 CPU 與 10 核心 GPU - 銀色 (整修品)",
-  "price": 33900,
-  "url": "https://www.apple.com/tw/shop/product/fw1g3ta/a/15-吋-MacBook-Air-Apple-M4-晶片配備-10-核心-CPU-與-10-核心-GPU-銀色-(整修品)"
- },
  "FX2E3TA/A": {
   "name": "14 吋 MacBook Pro Apple M4 Pro 晶片配備 12 核心 CPU 與 16 核心 GPU - 銀色 (整修品)",
   "price": 60400,
@@ -278,11 +258,6 @@
   "name": "15 吋 MacBook Air Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 銀色 (整修品)",
   "price": 72200,
   "url": "https://www.apple.com/tw/shop/product/g1ls0ta/a"
- },
- "G1LT0TA/A": {
-  "name": "15 吋 MacBook Air Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 星光色 (整修品)",
-  "price": 48200,
-  "url": "https://www.apple.com/tw/shop/product/g1lt0ta/a"
  },
  "G1LW0TA/A": {
   "name": "15 吋 MacBook Air Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 午夜色 (整修品)",
