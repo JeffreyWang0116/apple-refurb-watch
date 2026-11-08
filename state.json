@@ -54,11 +54,6 @@
   "price": 45400,
   "url": "https://www.apple.com/tw/shop/product/fdhf4ta/a"
  },
- "FDHG4TA/A": {
-  "name": "13 吋 MacBook Air Apple M5 晶片配備 10 核心 CPU 與 10 核心 GPU - 午夜色 (整修品)",
-  "price": 51300,
-  "url": "https://www.apple.com/tw/shop/product/fdhg4ta/a"
- },
  "FDHH4TA/A": {
   "name": "13 吋 MacBook Air Apple M5 晶片配備 10 核心 CPU 與 8 核心 GPU - 天藍色 (整修品)",
   "price": 36300,
@@ -123,11 +118,6 @@
   "name": "16 吋 MacBook Pro Apple M5 Pro 晶片配備 18 核心 CPU 與 20 核心 GPU - 太空黑色 (整修品)",
   "price": 84900,
   "url": "https://www.apple.com/tw/shop/product/fgea4ta/a/16-吋-MacBook-Pro-Apple-M5-Pro-晶片配備-18-核心-CPU-與-20-核心-GPU-太空黑色-整修品"
- },
- "FHFD4TA/A": {
-  "name": "MacBook Neo Apple A18 Pro - 青橘黃色 (整修品)",
-  "price": 20490,
-  "url": "https://www.apple.com/tw/shop/product/fhfd4ta/a/MacBook-Neo-Apple-A18-Pro-晶片-青橘黃色-整修品"
  },
  "FHFF4TA/A": {
   "name": "MacBook Neo Apple A18 Pro 晶片 - 靛青色 (整修品)",
